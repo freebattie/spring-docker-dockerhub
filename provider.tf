@@ -1,3 +1,5 @@
+
+
 terraform {
   required_providers {
     aws = {
@@ -5,10 +7,14 @@ terraform {
       version = "4.39.0"
     }
   }
+
+  // trenges for å ikke lagres lokalt eller på github under github actions
   backend "s3" {
-    bucket = "pgr301-2021-terraform-state"
+    bucket = "bjne222"
     key    = "bjne002/apprunner-a-new-state.state"
-    region = "eu-north-1"
+    region = "eu-west-1"
   }
+
+
 }
 
